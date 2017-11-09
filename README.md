@@ -1,7 +1,6 @@
 # Blog
 
-The Elixir backend for Blog, based on 
-[Blog](https://github.com/infinitered/blog).
+The Elixir backend for Blog.
 
 ## Scripts
 
@@ -36,9 +35,9 @@ The Elixir backend for Blog, based on
 
 ## Architecture
 
-Blog uses the Blog code organization conventions.
+Blog uses the Mithril code organization conventions.
 
 - `apps/blog` contains the business logic for the application.
   See its README and docs for details on its public API.
-
-TODO: describe other apps
+- `apps/blog_api` provides a GraphQL API.
+- `apps/blog_web` contains a simple Phoenix application, which mounts the GraphQL API from `apps/blog_api`.
